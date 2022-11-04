@@ -17,7 +17,6 @@ def main():
                 count += 1
                 print ('Correct!')
             else:
-                count == 0
                 print ('\'' + answer + '\' is wrong answer ;(. Correct answer was \'yes\'.\nLet\'s try again,' + name +'!')
                 break
         elif x % 2 != 0:
@@ -25,7 +24,6 @@ def main():
                 count += 1
                 print ('Correct!')
             else:
-                count == -1
                 print ('\'' + answer + '\' is wrong answer ;(. Correct answer was \'no\'.\nLet\'s try again,' + name +'!')
                 break
     if count == 3:
