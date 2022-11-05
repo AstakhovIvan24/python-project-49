@@ -5,6 +5,7 @@ from random import randint
 
 
 def main():
+    print ('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print ('Hello, ' + name + '!\nAnswer "yes" if the number is even, otherwise answer "no".')
     count = 0
@@ -17,18 +18,20 @@ def main():
                 count += 1
                 print ('Correct!')
             else:
-                print ('\'' + answer + '\' is wrong answer ;(. Correct answer was \'yes\'.\nLet\'s try again,' + name +'!')
-                break
+                result = 'yes'
+                return wrong(answer, result, name)
         elif x % 2 != 0:
             if answer == 'no':
                 count += 1
                 print ('Correct!')
             else:
-                print ('\'' + answer + '\' is wrong answer ;(. Correct answer was \'no\'.\nLet\'s try again,' + name +'!')
-                break
+                result = 'no'
+                return wrong(answer, result, name)
     if count == 3:
         print ('Congratulations, ' + name + '!')
 
+def wrong(answer, result, name):
+    return print ('\'' + answer + '\' is wrong answer ;(. Correct answer was \'' + result +'\'.\nLet\'s try again,' + name +'!')
 
 if __name__ == '__main__':
     main()
