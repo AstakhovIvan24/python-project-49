@@ -20,7 +20,7 @@ def main():
             print('Correct!')
         else:
             result = y
-            wrong(answer, result, name)
+            return wrong(answer, result, name)
     if count == 3:
         print('Congratulations, ' + name + '!')
 
