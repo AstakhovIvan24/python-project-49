@@ -16,7 +16,7 @@ def main():
         op = ['-', '+', '*']
         operation = {'-': (x - y), '+': (x + y), '*': (x * y)}
         make_choice = choice(op)
-        print('Question: ' + str(x) + make_choice + str(y))
+        print('Question: ' + str(x) + ' ' + make_choice + ' ' + str(y))
         answer = prompt.string('Your answer: ')
         if make_choice == '-':
             if answer == str(x - y):
