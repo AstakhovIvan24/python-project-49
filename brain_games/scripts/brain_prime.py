@@ -39,7 +39,7 @@ def prime(x):
 def wrong(answer, result, name):
     print(f"'{answer}' is wrong answer ;(."
           f"Correct answer was '{result}'.\n"
-          f"Let\'s try again,{name}!")
+          f"Let\'s try again, {name}!")
 
 
 if __name__ == '__main__':
