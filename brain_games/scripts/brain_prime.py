@@ -19,7 +19,7 @@ def main():
             count += 1
             print('Correct!')
         else:
-            wrong(answer, y, name)
+            return wrong(answer, y, name)
     if count == 3:
         print('Congratulations, ' + name + '!')
 
