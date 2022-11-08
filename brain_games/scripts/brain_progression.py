@@ -16,7 +16,7 @@ def main():
         make_choice = choice(numbers)
         ind = numbers.index(int(make_choice))
         numbers[ind] = '..'
-        print('Question: ', *numbers)
+        print('Question:', *numbers)
         answer = prompt.string('Your answer: ')
         if answer == str(make_choice):
             count += 1
