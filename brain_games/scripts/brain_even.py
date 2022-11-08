@@ -7,8 +7,8 @@ from random import randint
 def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
-    print(f"Hello, {name}!\n"
-          f"Answer 'yes' if the number is even, otherwise answer 'no'.")
+    print(f'Hello, {name}!\n'
+          f'Answer "yes" if the number is even, otherwise answer "no".')
     count = 0
     while 0 <= count <= 2:
         x = randint(1, 100)

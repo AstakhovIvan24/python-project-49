@@ -7,8 +7,8 @@ from random import randint
 def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
-    print(f"Hello, {name}!\n"
-          f"Answer 'yes' if given number is prime. Otherwise answer 'no'.")
+    print(f'Hello, {name}!\n'
+          f'Answer "yes" if given number is prime. Otherwise answer "no".')
     count = 0
     while 0 <= count < 3:
         x = randint(0, 100)
