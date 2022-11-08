@@ -6,6 +6,10 @@ from random import randint
 
 def main():
     print('Welcome to the Brain Games!')
+    brain_even()
+
+
+def brain_even():
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!\n'
           f'Answer "yes" if the number is even, otherwise answer "no".')
@@ -14,22 +18,20 @@ def main():
         x = randint(1, 100)
         print('Question: ' + str(x))
         answer = prompt.string('Your answer: ')
-        if x % 2 == 0:
-            if answer == 'yes':
-                count += 1
-                print('Correct!')
-            else:
-                result = 'yes'
-                return wrong(answer, result, name)
-        elif x % 2 != 0:
-            if answer == 'no':
-                count += 1
-                print('Correct!')
-            else:
-                result = 'no'
-                return wrong(answer, result, name)
+        if answer == check_even(x):
+            count += 1
+            print('Correct!')
+        else:
+            return wrong(answer, check_even(x), name)
     if count == 3:
         print('Congratulations, ' + name + '!')
+
+
+def check_even(x):
+    if x % 2 == 0:
+        return 'yes'
+    else:
+        return 'no'
 
 
 def wrong(answer, result, name):
