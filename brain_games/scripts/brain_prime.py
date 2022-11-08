@@ -13,7 +13,7 @@ def main():
     while 0 <= count < 3:
         x = randint(0, 100)
         y = prime(x)
-        print('Question: ', x)
+        print('Question:', x)
         answer = prompt.string('Your answer: ')
         if answer == y:
             count += 1
