@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 
 import prompt
+from brain_games.scripts.core import run_game
+from brain_games.games import even_game
 from random import randint
 
+
 post = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+
+def main():
+    run_game(even_game)
 
 
 def game_rules():
@@ -19,3 +26,7 @@ def check_even(x):
         return 'yes'
     else:
         return 'no'
+
+
+if __name__ == '__main__':
+    main()

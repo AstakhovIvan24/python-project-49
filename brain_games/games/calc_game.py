@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 
 import prompt
+from brain_games.scripts.core import run_game
+from brain_games.games import calc_game
 from random import randint
 from random import choice
 post = 'What is the result of the expression?'
+
+
+def main():
+    run_game(calc_game)
 
 
 def game_rules():
@@ -18,7 +24,5 @@ def game_rules():
     return answer, result
 
 
-
-# def check_answer(answer, make_choice, x, y):
-#     operation = {'-': (x - y), '+': (x + y), '*': (x * y)}
-#     return str(operation[make_choice]):
+if __name__ == '__main__':
+    main()
