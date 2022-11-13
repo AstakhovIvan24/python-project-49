@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+"""
+ "Calc Odd game"
+"""
+
 from brain_games.core import run_game
 from brain_games.games import calc_game
 
