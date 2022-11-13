@@ -1,22 +1,14 @@
 #!/usr/bin/env python3
 
-import prompt
-from brain_games.scripts.core import run_game
-from brain_games.games import prime_game
 from random import randint
-post = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_POST = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def main():
-    run_game(prime_game)
-
-
-def game_rules():
+def game():
     x = randint(0, 100)
     result = prime(x)
-    print('Question:', x)
-    answer = prompt.string('Your answer: ')
-    return answer, result
+    question = str(x)
+    return question, result
 
 
 def prime(x):
@@ -28,7 +20,3 @@ def prime(x):
         return 'yes'
     else:
         return 'no'
-
-
-if __name__ == '__main__':
-    main()

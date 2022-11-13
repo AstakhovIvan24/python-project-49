@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 
-from brain_games.scripts.cli import welcome_user
+from brain_games.cli import welcome_user
+import prompt
 
 
-def run_game(game):
+def run_game(module):
     name = welcome_user()
-    print(game.post)
+    print(module.GAME_POST)
     count = 0
     while 0 <= count < 3:
-        answer, result = game.game_rules()
+        question, result = module.game()
+        print('Question: ' + question)
+        answer = prompt.string('Your answer: ')
         if answer == result:
             count += 1
             print('Correct!')
