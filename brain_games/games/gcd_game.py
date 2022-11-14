@@ -3,11 +3,13 @@
 from random import randint
 
 GAME_POST = "Find the greatest common divisor of given numbers."
+MIN_RANGE = 1
+MAX_RANGE = 100
 
 
 def game():
-    x = randint(1, 100)
-    y = randint(1, 100)
+    x = randint(MIN_RANGE, MAX_RANGE)
+    y = randint(MIN_RANGE, MAX_RANGE)
     result = str(gcd_recursive(x, y))
     question = (str(x) + ' ' + str(y))
     return question, result

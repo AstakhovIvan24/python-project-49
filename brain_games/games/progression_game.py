@@ -3,6 +3,9 @@
 from random import randint
 from random import choice
 GAME_POST = "What number is missing in the progression?"
+MIN_RANGE = 0
+MAX_RANGE = 100
+LIST_LEN = 10
 
 
 def game():
@@ -15,11 +18,11 @@ def game():
 
 
 def list_generation():
-    x = randint(0, 100)
-    y = randint(0, 100)
+    x = randint(MIN_RANGE, MAX_RANGE)
+    y = randint(MIN_RANGE, MAX_RANGE)
     i = 0
     numbers = [x]
-    while i < 10:
+    while i < LIST_LEN:
         numbers.append(numbers[i] + y)
         i += 1
     return numbers
