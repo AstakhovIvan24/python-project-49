@@ -16,7 +16,7 @@ def game():
 def is_prime(x):
     if x <= 1:
         return 'no'
-    for i in range(2, number):
-        if number % i == 0:
+    for i in range(2, x):
+        if x % i == 0:
             return 'no'
     return 'yes'
