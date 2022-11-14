@@ -14,11 +14,9 @@ def game():
 
 
 def is_prime(x):
-    k = 0
-    for i in range(2, x // 2 + 1):
-        if x % i != 0:
-            k = k + 1
-    if k <= 0:
-        return 'yes'
-    else:
+    if x <= 1:
         return 'no'
+    for i in range(2, number):
+        if number % i == 0:
+            return 'no'
+    return 'yes'
